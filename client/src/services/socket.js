@@ -1,9 +1,9 @@
-import io from "socket.io-client";
+import io from 'socket.io-client';
 
 let socket = null;
 
 export const connectSocket = (token) => {
-    if (!socket?.connect) return socket;
+    if (socket?.connected) return socket;
 
     socket = io(import.meta.env.VITE_SOCKET_URL, {
         auth: { token },
