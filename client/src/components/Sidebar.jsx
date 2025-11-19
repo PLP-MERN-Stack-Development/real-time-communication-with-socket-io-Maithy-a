@@ -68,7 +68,7 @@ export default function Sidebar() {
         <h1>Chat</h1>
         <div className="sidebar-actions">
           <button className="btn-icon" onClick={() => setShowCreateRoom(!showCreateRoom)}>
-            ➕
+            <img src="/icons/plus.png" width="16" height="16" alt="Create Room" />
           </button>
         </div>
       </div>

@@ -105,7 +105,8 @@ export default function ChatBox() {
             onClick={() => fileInputRef.current?.click()}
             disabled={uploading || !connected}
           >
-            📎
+
+            <img src="/icons/paper-clip.png" width="14" height="14" alt="Attach" />
           </button>
           <input
             ref={fileInputRef}
@@ -115,7 +116,7 @@ export default function ChatBox() {
           />
           <button
             type="submit"
-            className="btn btn-primary"
+            className="bg-blue-600! p-2 rounded-xl text-white hover:bg-blue-700! px-6! py-2!"
             disabled={!text.trim() || !connected || sending}
           >
             {sending ? '...' : 'Send'}
